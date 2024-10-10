@@ -1,0 +1,233 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f2f5; /* Arka plan için modern bir renk */
+}
+
+/* Sayfa Düzeni */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Sol Sidebar - Sekme/Butonlar */
+.left-sidebar {
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    border-right: 4px solid #000000;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Hafif gölge efekti */
+    border-radius: 0 20px 20px 0; /* Yuvarlak kenar detayı */
+}
+
+.tab-button {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.button-container {
+    display: flex; /* Butonları yan yana dizmek için */
+    justify-content: center; /* Butonları ortalamak için */
+    gap: 10px; /* Butonlar arası boşluk */
+}
+
+button.editBtn, button.deleteBtn {
+    width: 50px; /* Genişlik */
+    height: 35px; /* Yükseklik */
+    background-color: #4CAF50; /* Buton arkaplan rengi */
+    border: none; /* Kenarlık yok */
+    color: white; /* Yazı rengi */
+    text-align: center; /* Yazı hizalaması */
+    text-decoration: none; /* Alt çizgi yok */
+    font-size: 14px; /* Yazı boyutu */
+    margin: 5px; /* Butonlar arası boşluk */
+    cursor: pointer; /* Fare imlecini işaretçi yap */
+    border-radius: 5px; /* Butonun köşeleri yuvarlatılmış */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.0rem;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 15px; /* Butonlar için yuvarlak köşe */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease; /* Hover için geçiş efekti */
+}
+
+    button i {
+        font-size: 1.5rem; /* FontAwesome ikonlarının boyutu */
+    }
+
+    button:hover {
+        background-color: #474747; /* Hover etkisi */
+    }
+
+/* İçerik Alanı */
+.content {
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px; /* İçerik kutusu için yuvarlak köşe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #000000;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+td {
+    color: #2c3e50;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+.form-group {
+    margin-bottom: 7px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px; /* Textarea'nın varsayılan yüksekliği */
+}
+
+button.btn-submit {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button.btn-submit:hover {
+        background-color: #474747;
+    }
+
+
+button.btn-add {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button.btn-add:hover {
+        background-color: #474747;
+    }
+
+.close {
+    color: #ff0000;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.form-container {
+    display: flex; /* Flex layout */
+    justify-content: space-between; /* Space between columns */
+    width: 100%; /* Full width */
+}
+
+.form-column {
+    width: 48%; /* Each column takes 48% of the width */
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Padding for spacing */
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 0.5px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "CreateCustomerCallRecorder",
+    "RelativePath": "api/Registration/CreateCustomerCallRecorder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "ReceptionRegistrationWeb.Models.CallRecorderCustomer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "CreateCustomerShowroom",
+    "RelativePath": "api/Registration/CreateCustomerShowroom",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "ReceptionRegistrationWeb.Models.ShowroomCustomer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "DeleteCustomerCallRecorder",
+    "RelativePath": "api/Registration/DeleteCustomerCallRecorder/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "DeleteCustomerShowroom",
+    "RelativePath": "api/Registration/DeleteCustomerShowroom/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "GetCustomerCallRecorder",
+    "RelativePath": "api/Registration/GetCustomerCallRecorder",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "GetCustomerShowroom",
+    "RelativePath": "api/Registration/GetCustomerShowroom",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "UpdateCustomerCallRecorder",
+    "RelativePath": "api/Registration/UpdateCustomerCallRecorder",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "ReceptionRegistrationWeb.Models.CallRecorderCustomer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "UpdateCustomerShowroom",
+    "RelativePath": "api/Registration/UpdateCustomerShowroom",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customer",
+        "Type": "ReceptionRegistrationWeb.Models.ShowroomCustomer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "CallRecorder",
+    "RelativePath": "callRecorder",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReceptionRegistrationWeb.Controllers.RegistrationController",
+    "Method": "Showroom",
+    "RelativePath": "showroom",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

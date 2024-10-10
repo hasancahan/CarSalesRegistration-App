@@ -1,0 +1,100 @@
+﻿@model ReceptionRegistrationWeb.Models.Admin;
+@{
+    Layout = null;
+}
+
+
+<!-- Created By CodingNepal -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Login and Registration Form in HTML | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+<body>
+    <div class="wrapper">
+        
+        <div class="title-text">
+            <div class="title login">
+                <img src="~/content/img/Kia_Logo_B.png" alt="Logo" width="200" height="100">
+            </div>
+            <div class="title signup">
+                <img src="~/content/img/Kia_Logo_B.png" alt="Logo" width="200" height="100">
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Giriş</label>
+                <label for="signup" class="slide signup">Üye Ol</label>
+                <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+                <form asp-action="Login" method="post" class="login">
+                    <div class="field">
+                        <input asp-for="Username" type="text" placeholder="Kullanıcı Adı" required>
+                    </div>
+                    <div class="field">
+                        <input asp-for="Password" type="password" placeholder="Şifre" required>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Şifreni mi unuttun?</a>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Giriş Yap">
+                    </div>
+                    <div class="signup-link">
+                        Kayıtlı değil misin? <a href="">Üye Ol</a>
+                    </div>
+                </form>
+                <form asp-action="Register" method="post" class="signup">
+                    <div class="field">
+                        <input asp-for="FullName" type="text" placeholder="Ad Soyad" required>
+                    </div>
+                    <div class="field">
+                        <input asp-for="Username" type="text" placeholder="Kullanıcı Adı" required>
+                    </div>
+                    <div class="field">
+                        <input asp-for="Password" type="password" placeholder="Şifre" required>
+                    </div>
+                    <br >
+
+                    <select style="padding:10px; border-radius:8px; font-size:17px; width:330px;" asp-for="WorkTask" id="task" name="task">
+                        <option selected disabled>Üye Görevi Seçiniz</option>
+                        <option value="0">Resepsiyon</option>
+                        <option value="1">Satış Elemanı</option>
+                        <option value="2">Müdür</option>
+                    </select>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Üye Ol">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginText = document.querySelector(".title-text .login");
+        const loginForm = document.querySelector("form.login");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const signupLink = document.querySelector("form .signup-link a");
+        signupBtn.onclick = (()=>{
+          loginForm.style.marginLeft = "-50%";
+          loginText.style.marginLeft = "-50%";
+        });
+        loginBtn.onclick = (()=>{
+          loginForm.style.marginLeft = "0%";
+          loginText.style.marginLeft = "0%";
+        });
+        signupLink.onclick = (()=>{
+          signupBtn.click();
+          return false;
+        });
+    </script>
+</body>
+</html>
